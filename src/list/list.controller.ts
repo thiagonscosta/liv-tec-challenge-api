@@ -18,7 +18,6 @@ export class ListController {
 
   @Post()
   create(@Body() createListDto: CreateListDto) {
-    console.log(createListDto);
     return this.listService.create(createListDto);
   }
 
