@@ -1,8 +1,9 @@
+import 'dotenv/config';
+
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { List } from 'src/list/entities/list.entity';
 import { Task } from 'src/task/entities/task.entity';
-import 'dotenv/config';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
