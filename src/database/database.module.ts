@@ -2,8 +2,8 @@ import 'dotenv/config';
 
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { List } from 'src/list/entities/list.entity';
-import { Task } from 'src/task/entities/task.entity';
+// import { List } from 'src/list/entities/list.entity';
+// import { Task } from 'src/task/entities/task.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -13,7 +13,7 @@ import { Task } from 'src/task/entities/task.entity';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DATABASE,
-      entities: [List, Task],
+      entities: ['dist/**/*.entity.js'],
       synchronize: true,
     }),
   ],
