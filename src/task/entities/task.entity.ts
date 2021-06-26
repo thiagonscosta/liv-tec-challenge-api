@@ -15,7 +15,7 @@ export class Task {
   @Column()
   title: string;
 
-  @ManyToOne('List', (list: List) => list.tasks)
+  @ManyToOne('List', (list: List) => list.tasks, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'list_id' })
   list: List;
 }
