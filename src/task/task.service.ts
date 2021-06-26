@@ -55,7 +55,7 @@ export class TaskService {
 
     if (!updatedTask) {
       throw new HttpException(
-        'Error on update new task',
+        'Error on update task',
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }

@@ -6,8 +6,11 @@ export class List {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   title: string;
+
+  @Column({ nullable: true })
+  order: number;
 
   @OneToMany('Task', (task: Task) => task.list)
   tasks: Task[];

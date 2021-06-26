@@ -12,10 +12,10 @@ export class ListService {
   ) {}
 
   async create(createListDto: CreateListDto): Promise<List> {
-    const list = await this.listRepository.create({
-      title: createListDto.title,
-    });
+    const list = await this.listRepository.create(createListDto);
+
     const newList = await this.listRepository.save(list);
+
     if (!newList) {
       throw new HttpException(
         'Error on create new list',
