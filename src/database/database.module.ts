@@ -15,7 +15,6 @@ dotenv.config();
       database: process.env.DATABASE,
       entities: ['dist/**/*.entity.js'],
       synchronize: true,
-      ssl: true,
     }),
   ],
 })
