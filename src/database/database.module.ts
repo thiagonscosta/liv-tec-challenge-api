@@ -15,12 +15,12 @@ dotenv.config();
       database: process.env.DATABASE,
       entities: ['dist/**/*.entity.js'],
       synchronize: true,
-      // ssl: false,
-      // extra: {
-      //   ssl: {
-      //     rejectUnauthorized: false,
-      //   },
-      // },
+      ssl: false,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
     }),
   ],
 })
